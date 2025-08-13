@@ -15,8 +15,8 @@ function do_sync(){
     git switch -c mirror "downstream/$branch"
     git merge "$branch"
     git push downstream "HEAD:$branch" 
-    rm -rf "$target"
     popd
+    rm -rf "$target"
 }
 
 
